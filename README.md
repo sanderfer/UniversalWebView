@@ -5,18 +5,18 @@
 
 1.jitpack
 ```
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 2.控件依赖
 ```
-	dependencies {
-	        implementation 'com.github.sanderfer:UniversalWebView:1.0.1'
-	}
+dependencies {
+	implementation 'com.github.sanderfer:UniversalWebView:1.0.1'
+}
 ```
 
 ## 问题
