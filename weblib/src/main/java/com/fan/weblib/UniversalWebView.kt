@@ -2,7 +2,9 @@ package com.fan.weblib
 
 import android.content.Context
 import android.util.AttributeSet
+import android.webkit.WebChromeClient
 import android.webkit.WebView
+import android.webkit.WebViewClient
 
 class UniversalWebView(context: Context, attrs: AttributeSet) : WebView(context, attrs) {
 
@@ -44,6 +46,9 @@ class UniversalWebView(context: Context, attrs: AttributeSet) : WebView(context,
         settings.allowFileAccess = true
         settings.allowFileAccessFromFileURLs = true
         settings.allowUniversalAccessFromFileURLs = true
+        webViewClient = WebViewClient()
+        webChromeClient = WebChromeClient();
+
         loadUrl("file:///android_asset/pdfjs/web/viewer.html?file=$mUrl")
     }
 
